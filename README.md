@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# EduLearnAI 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+EduLearnAI is a full stack mini service designed to provide intelligent tutoring support for students, leveraging OpenAI's powerful language model to facilitate personalized learning experiences.
 
-## Available Scripts
+Live Web App: https://eduailearn.netlify.app 
 
-In the project directory, you can run:
+## Features
+- **Interactive Chat Interface**: Engage with students through a conversational interface that adapts to their learning needs.
+- **Subject and Grade Level Customization**: Tailor responses based on the subject matter and the student's grade level.
+- **Step-by-Step Explanations**: Provide clear and concise explanations of concepts to enhance understanding.
+- **CORS Support**: Enable cross-origin requests for seamless integration with frontend applications.
 
-### `npm start`
+## Architecture
+```mermaid
+graph LR
+    A[Client] -->|HTTP Requests| B[Express Server]
+    B -->|API Calls| C[OpenAI API]
+    B -->|Responses| A
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tech Stack
+- **Node.js**: JavaScript runtime for building the server.
+- **Express**: Web framework for building the API.
+- **CORS**: Middleware for enabling cross-origin resource sharing.
+- **OpenAI**: API for accessing advanced language processing capabilities.
+- **dotenv**: Module for managing environment variables.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
+To get started with the EduLearnAI backend, follow these steps:
 
-### `npm test`
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/petera-major/edu-backend.git
+   cd edu-backend
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-### `npm run build`
+3. **Set up environment variables**:
+   Create a `.env` file in the root directory and add your OpenAI API key:
+   ```
+   OPENAI_API_KEY=your_openai_api_key_here
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. **Start the server**:
+   ```bash
+   npm start
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Usage
+Once the server is running, you can interact with the EduLearnAI backend by sending HTTP requests to the defined API endpoints. The server will respond with tutoring assistance based on the input provided.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Roadmap
+- [ ] Implement user authentication for personalized sessions.
+- [ ] Expand the range of subjects and grade levels supported.
+- [ ] Enhance the conversational capabilities of the AI tutor.
+- [ ] Created a react frontend application to interact with the backend.
