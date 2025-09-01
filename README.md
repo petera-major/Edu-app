@@ -24,6 +24,8 @@ graph LR
 - **CORS**: Middleware for enabling cross-origin resource sharing.
 - **OpenAI**: API for accessing advanced language processing capabilities.
 - **dotenv**: Module for managing environment variables.
+- **React**: Ui framework.
+- **TailWindCSS**: Css used for design
 
 ## Getting Started
 To get started with the EduLearnAI backend, follow these steps:
